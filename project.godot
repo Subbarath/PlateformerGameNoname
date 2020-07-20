@@ -1,0 +1,112 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://Scripts/Actors/actor.gd"
+}, {
+"base": "InAir",
+"class": "Fall",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/InAir/fall.gd"
+}, {
+"base": "OnGround",
+"class": "Idle",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/OnGround/idle.gd"
+}, {
+"base": "Motion",
+"class": "InAir",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/InAir/in_air.gd"
+}, {
+"base": "InAir",
+"class": "Jump",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/InAir/jump.gd"
+}, {
+"base": "State",
+"class": "Motion",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/motion.gd"
+}, {
+"base": "OnGround",
+"class": "Move",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/OnGround/move.gd"
+}, {
+"base": "Motion",
+"class": "OnGround",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/Motion/OnGround/on_ground.gd"
+}, {
+"base": "StateMachine",
+"class": "PlayerStateMachine",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/player_state_machine.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/state.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Scripts/Actors/StateMachine/state_machine.gd"
+} ]
+_global_script_class_icons={
+"Actor": "",
+"Fall": "",
+"Idle": "",
+"InAir": "",
+"Jump": "",
+"Motion": "",
+"Move": "",
+"OnGround": "",
+"PlayerStateMachine": "",
+"State": "",
+"StateMachine": ""
+}
+
+[application]
+
+config/name="Chill game plateformer noname"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[input]
+
+movement_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
+ ]
+}
+movement_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+ ]
+}
+movement_jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+movement_dash={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
